@@ -1,2 +1,2 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"/Users/fairuzmohamed/Desktop/projectoop/ProjectOOPGame_Fresh/Content/Font.spritefont","/Users/fairuzmohamed/Desktop/projectoop/ProjectOOPGame_Fresh/Content/bin/Font.xnb","FontDescriptionProcessor","SpriteFontContent",443,37914,0.102846
+"/Users/fairuzmohamed/Desktop/projectoop/ProjectOOPGame_Fresh/Content/font.spritefont.xml","/Users/fairuzmohamed/Desktop/projectoop/ProjectOOPGame_Fresh/Content/bin/font.spritefont.xnb","PassThroughProcessor","FontDescription",443,2259,0.067307

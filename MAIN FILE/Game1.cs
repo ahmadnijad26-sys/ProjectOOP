@@ -193,7 +193,7 @@ namespace ProjectOOPGame_Fresh
             Rectangle healthBarBg = new Rectangle(20, 20, 200, 20);
             Rectangle healthBarFg = new Rectangle(20, 20, (int)(200 * (player.Health / 100f)), 20);
             spriteBatch.Draw(pixelTexture, healthBarBg, Color.DarkRed);
-            spriteBatch.Draw(pixelTexture, healthBarFg, Color.Green);
+            spriteBatch.Draw(pixelTexture, healthBarFg, Color.Red);
 
             if (font != null)
             {

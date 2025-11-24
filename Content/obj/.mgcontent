@@ -4,7 +4,7 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>/Users/fairuzmohamed/Desktop/projectoop/ProjectOOPGame_Fresh/Content/Font.spritefont</File>
+    <File>/Users/fairuzmohamed/Desktop/projectoop/ProjectOOPGame_Fresh/Content/font.spritefont.xml</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

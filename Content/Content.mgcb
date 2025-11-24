@@ -1,9 +1,9 @@
 
 #----------------------------- Global Properties ----------------------------#
 
-/outputDir:bin/$(Platform)
-/intermediateDir:obj/$(Platform)
-/platform:DesktopGL
+/outputDir:bin
+/intermediateDir:obj
+/platform:Windows
 /config:
 /profile:Reach
 /compress:False
@@ -13,128 +13,8 @@
 
 #---------------------------------- Content ---------------------------------#
 
-# Placeholder textures (auto-generated)
-Content/player_idle.png
-	/importer:TextureImporter
-	/processor:TextureProcessor
-	/processorParam:ColorKeyColor=255,0,255,255
-	/processorParam:GenerateMipmaps=False
-	/processorParam:PremultiplyAlpha=True
-
-Content/player_walk.png
-	/importer:TextureImporter
-	/processor:TextureProcessor
-	/processorParam:ColorKeyColor=255,0,255,255
-	/processorParam:GenerateMipmaps=False
-	/processorParam:PremultiplyAlpha=True
-
-Content/player_attack.png
-	/importer:TextureImporter
-	/processor:TextureProcessor
-	/processorParam:ColorKeyColor=255,0,255,255
-	/processorParam:GenerateMipmaps=False
-	/processorParam:PremultiplyAlpha=True
-
-Content/snake.png
-	/importer:TextureImporter
-	/processor:TextureProcessor
-	/processorParam:ColorKeyColor=255,0,255,255
-	/processorParam:GenerateMipmaps=False
-	/processorParam:PremultiplyAlpha=True
-
-Content/spider.png
-	/importer:TextureImporter
-	/processor:TextureProcessor
-	/processorParam:ColorKeyColor=255,0,255,255
-	/processorParam:GenerateMipmaps=False
-	/processorParam:PremultiplyAlpha=True
-
-Content/grass.png
-	/importer:TextureImporter
-	/processor:TextureProcessor
-	/processorParam:ColorKeyColor=255,0,255,255
-	/processorParam:GenerateMipmaps=False
-	/processorParam:PremultiplyAlpha=True
-
-Content/tree.png
-	/importer:TextureImporter
-	/processor:TextureProcessor
-	/processorParam:ColorKeyColor=255,0,255,255
-	/processorParam:GenerateMipmaps=False
-	/processorParam:PremultiplyAlpha=True
-
-Content/water.png
-	/importer:TextureImporter
-	/processor:TextureProcessor
-	/processorParam:ColorKeyColor=255,0,255,255
-	/processorParam:GenerateMipmaps=False
-	/processorParam:PremultiplyAlpha=True
-
-Content/stone.png
-	/importer:TextureImporter
-	/processor:TextureProcessor
-	/processorParam:ColorKeyColor=255,0,255,255
-	/processorParam:GenerateMipmaps=False
-	/processorParam:PremultiplyAlpha=True
-
-Content/chest_closed.png
-	/importer:TextureImporter
-	/processor:TextureProcessor
-	/processorParam:ColorKeyColor=255,0,255,255
-	/processorParam:GenerateMipmaps=False
-	/processorParam:PremultiplyAlpha=True
-
-Content/chest_open.png
-	/importer:TextureImporter
-	/processor:TextureProcessor
-	/processorParam:ColorKeyColor=255,0,255,255
-	/processorParam:GenerateMipmaps=False
-	/processorParam:PremultiplyAlpha=True
-
-Content/vine.png
-	/importer:TextureImporter
-	/processor:TextureProcessor
-	/processorParam:ColorKeyColor=255,0,255,255
-	/processorParam:GenerateMipmaps=False
-	/processorParam:PremultiplyAlpha=True
-
-Content/exit_door.png
-	/importer:TextureImporter
-	/processor:TextureProcessor
-	/processorParam:ColorKeyColor=255,0,255,255
-	/processorParam:GenerateMipmaps=False
-	/processorParam:PremultiplyAlpha=True
-
-Content/key.png
-	/importer:TextureImporter
-	/processor:TextureProcessor
-	/processorParam:ColorKeyColor=255,0,255,255
-	/processorParam:GenerateMipmaps=False
-	/processorParam:PremultiplyAlpha=True
-
-Content/blade.png
-	/importer:TextureImporter
-	/processor:TextureProcessor
-	/processorParam:ColorKeyColor=255,0,255,255
-	/processorParam:GenerateMipmaps=False
-	/processorParam:PremultiplyAlpha=True
-
-Content/knife.png
-	/importer:TextureImporter
-	/processor:TextureProcessor
-	/processorParam:ColorKeyColor=255,0,255,255
-	/processorParam:GenerateMipmaps=False
-	/processorParam:PremultiplyAlpha=True
-
-# Font
-Content/Font.spritefont
-	/importer:FontDescriptionImporter
-	/processor:FontDescriptionProcessor
-	/processorParam:PremultiplyAlpha=True
-	/processorParam:FontName=Arial
-	/processorParam:Size=14
-	/processorParam:Spacing=0
-	/processorParam:UseKerning=True
-	/processorParam:Style=Regular
-	/processorParam:CharacterRegions=32-126
+#begin font.spritefont.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:font.spritefont.xml
 
