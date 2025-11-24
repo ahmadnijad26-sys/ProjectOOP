@@ -1,60 +1,73 @@
-// Systems/LevelManager.cs
-using System.Collections.Generic;
-using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
+using System;
+using System.Collections.Generic;
 
 namespace ProjectOOPGame_Fresh
 {
     public class LevelManager
     {
-        private List<IGameLevel> levels;
-        private IGameLevel currentLevel;
-        private int currentLevelIndex = 0;
+        public Level CurrentLevel { get; private set; }
+        public Action<string> OnShowMessage { get; set; }
+        
+        private Dictionary<string, Level> levels;
+        private string currentLevelName;
 
         public LevelManager()
         {
-            levels = new List<IGameLevel>();
+            levels = new Dictionary<string, Level>();
         }
 
         public void Initialize(Player player)
         {
-            // Create all levels
-            levels.Add(new Level1(player));
-            //levels.Add(new Level2(player));
-            //levels.Add(new Level3(player));
+            // Create your levels
+            levels.Clear();
             
-            // Start with level 1
-            currentLevel = levels[0];
-            currentLevel.Initialize();
+            // Add your levels here - you'll need to create these level classes
+            levels["Tutorial"] = new TutoLevel(player);
+            levels["Level1"] = new Level1(player);
+            // Add more levels as needed...
+            
+            // Start with first level
+            currentLevelName = "Tutorial";
+            CurrentLevel = levels[currentLevelName];
+            
+            // Connect message system
+            foreach (var level in levels.Values)
+            {
+                level.OnShowMessage = OnShowMessage;
+            }
         }
 
-        public void Update(float deltaTime, KeyboardState keyState, KeyboardState prevKeyState)
+        public void Update(float deltaTime, KeyboardState currentKeyState, KeyboardState previousKeyState)
         {
-            currentLevel.Update(deltaTime, keyState, prevKeyState);
-            
-            // Check if level completed
-            if (currentLevel.IsCompleted)
+            if (CurrentLevel != null)
             {
-                currentLevelIndex++;
-                if (currentLevelIndex < levels.Count)
+                CurrentLevel.Update(deltaTime, currentKeyState, previousKeyState);
+                
+                // Check for level completion and transition to next level
+                if (CurrentLevel.IsCompleted)
                 {
-                    currentLevel = levels[currentLevelIndex];
-                    currentLevel.Initialize();
-                }
-                else
-                {
-                    // Game completed - all levels finished
-                    System.Diagnostics.Debug.WriteLine("ALL LEVELS COMPLETED!");
+                    // Transition to next level logic here
                 }
             }
         }
 
         public void Draw(SpriteBatch spriteBatch, Camera camera)
         {
-            currentLevel.Draw(spriteBatch, camera);
+            if (CurrentLevel != null)
+            {
+                CurrentLevel.Draw(spriteBatch, camera);
+            }
         }
 
-        public IGameLevel CurrentLevel => currentLevel;
-        public int CurrentLevelNumber => currentLevelIndex + 1;
+        public void ChangeLevel(string levelName)
+        {
+            if (levels.ContainsKey(levelName))
+            {
+                currentLevelName = levelName;
+                CurrentLevel = levels[levelName];
+            }
+        }
     }
 }
