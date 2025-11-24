@@ -30,3 +30,4 @@
 /Users/fairuzmohamed/Desktop/projectoop/ProjectOOPGame_Fresh/obj/Debug/net9.0/ProjectOOPGame_Fresh.pdb
 /Users/fairuzmohamed/Desktop/projectoop/ProjectOOPGame_Fresh/obj/Debug/net9.0/ProjectOOPGame_Fresh.genruntimeconfig.cache
 /Users/fairuzmohamed/Desktop/projectoop/ProjectOOPGame_Fresh/obj/Debug/net9.0/ref/ProjectOOPGame_Fresh.dll
+/Users/fairuzmohamed/Desktop/projectoop/ProjectOOPGame_Fresh/obj/Debug/net9.0/ProjectOOPGame_Fresh.sourcelink.json

@@ -273,7 +273,7 @@ namespace ProjectOOPGame_Fresh
         private float enemyRespawnTimer = 0f, enemyRespawnDelay = 30f;
         private KeyboardState prevKeyState;
 
-        private string cutsceneText = "Forward to the Sands of Remembrance";
+        private string cutsceneText = "Forward to the Sands of Remembrance, Welcome";
         private string displayedCutsceneText = "";
         private float cutsceneTypewriterTimer = 0f, cutsceneTypewriterSpeed = 0.05f;
         private int cutsceneCharIndex = 0;
