@@ -24,10 +24,10 @@
 /Users/fairuzmohamed/Desktop/projectoop/ProjectOOPGame_Fresh/obj/Debug/net9.0/ProjectOOPGame_Fresh.AssemblyInfoInputs.cache
 /Users/fairuzmohamed/Desktop/projectoop/ProjectOOPGame_Fresh/obj/Debug/net9.0/ProjectOOPGame_Fresh.AssemblyInfo.cs
 /Users/fairuzmohamed/Desktop/projectoop/ProjectOOPGame_Fresh/obj/Debug/net9.0/ProjectOOPGame_Fresh.csproj.CoreCompileInputs.cache
+/Users/fairuzmohamed/Desktop/projectoop/ProjectOOPGame_Fresh/obj/Debug/net9.0/ProjectOOPGame_Fresh.sourcelink.json
 /Users/fairuzmohamed/Desktop/projectoop/ProjectOOPGame_Fresh/obj/Debug/net9.0/ProjectO.99D17839.Up2Date
 /Users/fairuzmohamed/Desktop/projectoop/ProjectOOPGame_Fresh/obj/Debug/net9.0/ProjectOOPGame_Fresh.dll
 /Users/fairuzmohamed/Desktop/projectoop/ProjectOOPGame_Fresh/obj/Debug/net9.0/refint/ProjectOOPGame_Fresh.dll
 /Users/fairuzmohamed/Desktop/projectoop/ProjectOOPGame_Fresh/obj/Debug/net9.0/ProjectOOPGame_Fresh.pdb
 /Users/fairuzmohamed/Desktop/projectoop/ProjectOOPGame_Fresh/obj/Debug/net9.0/ProjectOOPGame_Fresh.genruntimeconfig.cache
 /Users/fairuzmohamed/Desktop/projectoop/ProjectOOPGame_Fresh/obj/Debug/net9.0/ref/ProjectOOPGame_Fresh.dll
-/Users/fairuzmohamed/Desktop/projectoop/ProjectOOPGame_Fresh/obj/Debug/net9.0/ProjectOOPGame_Fresh.sourcelink.json
