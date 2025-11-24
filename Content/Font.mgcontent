@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>/Users/fairuzmohamed/Desktop/projectoop/ProjectOOPGame_Fresh/Content/Font.spritefont</SourceFile>
+  <SourceTime>2025-11-23T22:05:56.0040937+08:00</SourceTime>
+  <DestFile>/Users/fairuzmohamed/Desktop/projectoop/ProjectOOPGame_Fresh/Content/Font.xnb</DestFile>
+  <DestTime>2025-11-24T00:20:25.9478035+08:00</DestTime>
+  <Importer>FontDescriptionImporter</Importer>
+  <ImporterTime>2025-10-20T22:25:32+08:00</ImporterTime>
+  <Processor>FontDescriptionProcessor</Processor>
+  <ProcessorTime>2025-10-20T22:25:32+08:00</ProcessorTime>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>
