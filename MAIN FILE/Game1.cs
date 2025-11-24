@@ -41,6 +41,7 @@ namespace ProjectOOPGame_Fresh
             
             // Initialize level management
             levelManager = new LevelManager();
+            levelManager.OnShowMessage = ShowMessage; // Connect the message system
             levelManager.Initialize(player);
             
             camera = new Camera();
@@ -49,7 +50,6 @@ namespace ProjectOOPGame_Fresh
             currentGameState = GameState.Playing;
             
             base.Initialize();
-
         }
 
         protected override void LoadContent()
