@@ -19,6 +19,12 @@ namespace ProjectOOPGame_Fresh
         private Texture2D pixelTexture;
         private SpriteFont font;
 
+        private float cameraShakeDuration = 0f;
+        private float cameraShakeIntensity = 0f;
+        private bool showMessage = false;
+        private string displayMessage = "";
+        private float messageTimer = 0f;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -92,7 +98,22 @@ namespace ProjectOOPGame_Fresh
 
         private void UpdatePlaying(float deltaTime)
         {
+            int previousHealth = levelManager.CurrentLevel.Player.Health;
+            
             levelManager.Update(deltaTime, inputManager.CurrentState, inputManager.PreviousState);
+            
+            // ADD THIS: Check for damage to trigger effects
+            if (levelManager.CurrentLevel.Player.Health < previousHealth)
+            {
+                TriggerDamageEffect();
+            }
+            
+            // ADD THIS: Update message timer
+            if (messageTimer > 0)
+            {
+                messageTimer -= deltaTime;
+                if (messageTimer <= 0) showMessage = false;
+            }
             
             // Check if player died
             if (levelManager.CurrentLevel.Player.State == EntityState.Dead)
@@ -100,7 +121,7 @@ namespace ProjectOOPGame_Fresh
                 currentGameState = GameState.GameOver;
                 return;
             }
-
+        
             // Update camera to follow player
             var screenCenter = new Vector2(1280 / 2f, 720 / 2f);
             camera.Update(deltaTime, levelManager.CurrentLevel.Player.Position, 
@@ -181,27 +202,52 @@ namespace ProjectOOPGame_Fresh
             spriteBatch.Draw(pixelTexture, new Rectangle(1280 - edge, 0, edge, 720), Color.Red * damageFlashAlpha);
         }
 
+        private void TriggerDamageEffect()
+        {
+            cameraShakeDuration = 0.2f;
+            cameraShakeIntensity = 5f;
+            damageFlashAlpha = 0.5f;
+            camera.Shake(0.2f, 5f);
+        }
+        
+        private void ShowMessage(string message)
+        {
+            displayMessage = message;
+            showMessage = true;
+            messageTimer = 3f;
+        }
+        
         private void DrawUI()
         {
-
             Player player = levelManager.CurrentLevel.Player;
             
             Rectangle uiPanel = new Rectangle(10, 10, 350, 180);
             spriteBatch.Draw(pixelTexture, uiPanel, Color.Black * 0.7f);
-
+        
             // Health bar
             Rectangle healthBarBg = new Rectangle(20, 20, 200, 20);
             Rectangle healthBarFg = new Rectangle(20, 20, (int)(200 * (player.Health / 100f)), 20);
             spriteBatch.Draw(pixelTexture, healthBarBg, Color.DarkRed);
             spriteBatch.Draw(pixelTexture, healthBarFg, Color.Red);
-
+        
             if (font != null)
             {
                 spriteBatch.DrawString(font, $"HP: {player.Health}/100", new Vector2(25, 22), Color.White);
                 spriteBatch.DrawString(font, "WASD: Move | Space: Attack | E: Interact",
                     new Vector2(10, 690), Color.White);
+        
+                // ADD THIS: Draw message if active
+                if (showMessage && messageTimer > 0)
+                {
+                    Vector2 msgSize = font.MeasureString(displayMessage);
+                    Vector2 msgPos = new Vector2(640 - msgSize.X / 2, 640);
+                    Rectangle msgBg = new Rectangle((int)msgPos.X - 10, (int)msgPos.Y - 10, 
+                                                  (int)msgSize.X + 20, (int)msgSize.Y + 20);
+                    spriteBatch.Draw(pixelTexture, msgBg, Color.Black * 0.8f);
+                    spriteBatch.DrawString(font, displayMessage, msgPos, Color.White);
+                }
             }
-
+        
             // Keys display
             for (int i = 0; i < player.GetKeyCount(); i++)
             {
